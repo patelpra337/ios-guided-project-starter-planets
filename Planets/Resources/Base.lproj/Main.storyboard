@@ -27,7 +27,7 @@
         <!--Planets-->
         <scene sceneID="G2Y-E0-4An">
             <objects>
-                <collectionViewController id="oCo-8Q-xXW" sceneMemberID="viewController">
+                <collectionViewController id="oCo-8Q-xXW" customClass="PlanetsCollectionViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="B9J-4f-x8f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,26 +46,40 @@
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xgZ-wc-eir">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gew-YK-Byy">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-H0-W46">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="119.66666666666667"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBa-nI-7S9">
-                                                    <rect key="frame" x="0.0" y="119.66666666666667" width="120" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xgZ-wc-eir">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-H0-W46">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="119.66666666666667"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBa-nI-7S9">
+                                                            <rect key="frame" x="0.0" y="119.66666666666667" width="120" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
-                                        </stackView>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="xgZ-wc-eir" secondAttribute="bottom" id="2RH-1q-15s"/>
+                                                <constraint firstItem="xgZ-wc-eir" firstAttribute="leading" secondItem="gew-YK-Byy" secondAttribute="leading" id="Gfo-58-2CY"/>
+                                                <constraint firstAttribute="width" constant="120" id="J5s-gL-uMW"/>
+                                                <constraint firstItem="xgZ-wc-eir" firstAttribute="top" secondItem="gew-YK-Byy" secondAttribute="top" id="MEt-bj-94f"/>
+                                                <constraint firstAttribute="trailing" secondItem="xgZ-wc-eir" secondAttribute="trailing" id="lPw-4Y-6tb"/>
+                                                <constraint firstAttribute="height" constant="140" id="uTj-Vc-csX"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="xgZ-wc-eir" secondAttribute="bottom" id="BXv-Sj-cIn"/>
-                                        <constraint firstAttribute="trailing" secondItem="xgZ-wc-eir" secondAttribute="trailing" id="HvU-mH-1Qh"/>
-                                        <constraint firstItem="xgZ-wc-eir" firstAttribute="top" secondItem="dTu-Sd-Nv4" secondAttribute="top" id="LEI-qk-zK7"/>
-                                        <constraint firstItem="xgZ-wc-eir" firstAttribute="leading" secondItem="dTu-Sd-Nv4" secondAttribute="leading" id="NkQ-YH-bYL"/>
+                                        <constraint firstAttribute="trailing" secondItem="gew-YK-Byy" secondAttribute="trailing" id="hDw-08-568"/>
+                                        <constraint firstAttribute="bottom" secondItem="gew-YK-Byy" secondAttribute="bottom" id="oA5-7O-ICv"/>
+                                        <constraint firstItem="gew-YK-Byy" firstAttribute="top" secondItem="dTu-Sd-Nv4" secondAttribute="top" id="pLM-LH-U7c"/>
+                                        <constraint firstItem="gew-YK-Byy" firstAttribute="leading" secondItem="dTu-Sd-Nv4" secondAttribute="leading" id="qkS-Sr-W89"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="120" height="140"/>
