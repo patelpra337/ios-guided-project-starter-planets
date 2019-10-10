@@ -11,7 +11,7 @@
         <!--Settings-->
         <scene sceneID="iiC-kv-rRd">
             <objects>
-                <viewController id="Jgg-pp-fSL" sceneMemberID="viewController">
+                <viewController id="Jgg-pp-fSL" customClass="SettingsViewController" customModule="Planets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="myq-5Z-O03">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-KG-tmt">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="changeShouldShowPluto:" destination="Jgg-pp-fSL" eventType="valueChanged" id="hjf-dq-Mxo"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -47,6 +50,9 @@
                     <navigationItem key="navigationItem" title="Settings" id="jXQ-Hr-Qky">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="NuZ-cw-HMK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="showPlutoSwitch" destination="PiL-KG-tmt" id="sOz-Ps-0gY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BO8-H7-LCS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
