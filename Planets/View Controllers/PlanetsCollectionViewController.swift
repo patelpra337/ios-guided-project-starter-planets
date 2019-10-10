@@ -16,13 +16,7 @@ class PlanetsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        collectionView.reloadData()
-//    }
-    
+      
     
     /*
     // MARK: - Navigation
@@ -33,6 +27,10 @@ class PlanetsCollectionViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToPlanetsCollectionViewController(_ sender: UIStoryboardSegue) {
+        collectionView.reloadData()
+    }
 
     // MARK: UICollectionViewDataSource
 
