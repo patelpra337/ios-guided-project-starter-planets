@@ -39,7 +39,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlanetCell" id="C8Y-YT-71n">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlanetCell" id="C8Y-YT-71n" customClass="PlanetCollectionViewCell" customModule="Planets" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dTu-Sd-Nv4">
@@ -69,6 +69,10 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="120" height="140"/>
+                                <connections>
+                                    <outlet property="imageView" destination="vmm-H0-W46" id="2R6-03-RKG"/>
+                                    <outlet property="textLabel" destination="xBa-nI-7S9" id="mdA-qM-n3F"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
